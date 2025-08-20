@@ -34,8 +34,11 @@ function App() {
    console.log(data)
   return (
     <>
-     <AppContext.Provider >
-       
+     <AppContext.Provider value={{data, username,setData,setSearchUser,loding,error}}>
+        <div>
+          <SearchBar/>
+          {loding && <p>Loding...</p>}
+        </div>
      </AppContext.Provider>
     </>
   )
